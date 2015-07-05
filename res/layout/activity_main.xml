@@ -7,8 +7,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.sdf.ezsgws.MainActivity" >
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- 点击效果android:listSelector="@android:color/transparent" -->
+    <GridView
+        android:id="@+id/gv_home_items_id"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:horizontalSpacing="3dp"
+        android:numColumns="auto_fit"
+        android:paddingTop="30dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="30dp" >
+    </GridView>
 </RelativeLayout>
