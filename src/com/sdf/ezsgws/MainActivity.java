@@ -2,7 +2,6 @@ package com.sdf.ezsgws;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,6 +12,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.TextView;
+
+import com.sdf.ezsgws.util.Tool;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -109,22 +110,6 @@ public class MainActivity extends Activity {
 	}
 
 	/**
-	 * 设置TextView需要有上方的图标
-	 *
-	 * @param tv
-	 * @param drawableID
-	 */
-	private void setTextDrawableTop(TextView tv, int drawableID) {
-		Drawable drawable;
-		drawable = getResources().getDrawable(drawableID);
-		// 调用setCompoundDrawables时，必须调用Drawable.setBounds()方法,否则图片不显示
-		drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
-		tv.setCompoundDrawables(null, drawable, null, null); // 设置左图标
-		int padding = (int) getResources().getDimension(R.dimen.textview_top_drawable_padding);
-		tv.setCompoundDrawablePadding(padding);// 设置图片和text之间的间距
-	}
-
-	/**
 	 * 菜单适配器：GridView
 	 *
 	 * @author itsdf
@@ -175,7 +160,7 @@ public class MainActivity extends Activity {
 			}
 			final MenuItem item = datas.get(position);
 			holder.text.setText(item.textId);
-			setTextDrawableTop(holder.text, item.drawableId);
+			Tool.getTool().setTextDrawableTop(holder.text, item.drawableId);
 			return convertView;
 		}
 
