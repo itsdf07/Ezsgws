@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\AndroidWork\WorkspaceEclipse\Ezsgws\libs\android-support-v4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="605c447c20ca216b5556af9f215af5d4bba1b117">
+        <dex dex="E:\AndroidWork\WorkspaceEclipse\Ezsgws\build\intermediates\pre-dexed\debug\android-support-v4-d4df7240c981f8c826749e7018948f854c2dbe66.jar" />
+    </item>
+
+</items>
